@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <time.h>
+#include <unistd.h>
+#include <math.h>
+
+int main(){ 
+ clock_t tempoOrd;
+    float valordapassagem = 6.25;
+    float valorpago;
+    float total;
+    int cu, c,s;
+    char sei;
+   tempoOrd = clock();
+  fflush(stderr);
+     for(s=0;s<1;s--){
+         printf("\n__________________________________\n");
+    printf("Valor da passagem atual %.2f\n", valordapassagem);
+
+    printf("Valor recebido: \n");
+    scanf("%f", &valorpago);
+fflush(stdin);
+    if (valorpago < valordapassagem) {
+        printf("Valor insuficiente!\n");
+       fflush(stdin) ;
+    } else {
+        printf("Quantidade: \n");
+        scanf("%d", &c);
+
+         total=valorpago-valordapassagem*c;
+fflush(stdin);
+ if(total<-0.01){
+                printf("Valor insuficiente!\n");
+                
+               
+              
+        }
+       else{printf("Valor do troco: %.2f\n", total);}
+
+    }
+        
+       usleep(1500000);
+     
+    }
+
+    return 0;
+}
